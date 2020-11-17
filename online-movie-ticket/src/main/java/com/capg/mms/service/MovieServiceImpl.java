@@ -18,10 +18,7 @@ public class MovieServiceImpl implements IMovieService{
 	
 	@Override
 	public Movie addMovie(Movie m) {
-//		Optional<Movie> movie = movieDao.findById(m.getMovieId()) ;
-//		if(movie.isPresent()) {
-//			throw new MovieAlreadyPresent("Movie Aleardy present for ID: " + m.getMovieId()) ;
-//		}
+		
 		return movieDao.save(m) ;
 	}
 

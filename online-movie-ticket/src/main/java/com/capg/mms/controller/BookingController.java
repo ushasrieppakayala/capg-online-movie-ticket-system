@@ -20,7 +20,7 @@ import com.capg.mms.service.BookingServiceImpl;
 import com.capg.mms.service.ShowServiceImpl;
 
 @RestController
-@CrossOrigin("*")
+//@CrossOrigin("*")
 @RequestMapping("/booking")
 public class BookingController {
 
