@@ -35,6 +35,11 @@ public class City {
 	@OnDelete(action=OnDeleteAction.CASCADE) 
 	private List<Theater> theTheater;
 
+	
+	public City() {
+		super();
+	}
+
 	public long getCityId() {
 		return cityId;
 	}

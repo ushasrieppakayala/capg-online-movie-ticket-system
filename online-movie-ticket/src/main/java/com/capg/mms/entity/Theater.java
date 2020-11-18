@@ -44,6 +44,10 @@ public class Theater {
 	
 	
 
+	public Theater() {
+		super();
+	}
+
 	public City getCity() {
 		return city;
 	}

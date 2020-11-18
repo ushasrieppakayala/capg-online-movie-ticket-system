@@ -35,6 +35,11 @@ public class Show {
 	
 	private String show_time;
 
+	
+	public Show() {
+		super();
+	}
+
 	public long getShow_Id() {
 		return show_Id;
 	}

@@ -7,6 +7,11 @@ public class Response {
 	private Object data;
 	private Date date;
 
+	
+	public Response() {
+		super();
+	}
+
 	public Response(Object data, Date date) {
 		super();
 		this.data = data;

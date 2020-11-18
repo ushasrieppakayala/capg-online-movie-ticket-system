@@ -20,7 +20,7 @@ import com.capg.mms.service.BookingServiceImpl;
 import com.capg.mms.service.ShowServiceImpl;
 
 @RestController
-//@CrossOrigin("*")
+@CrossOrigin("*")
 @RequestMapping("/booking")
 public class BookingController {
 
@@ -34,8 +34,8 @@ public class BookingController {
 	public Bookings createBooking(@PathVariable(value="show") long showId, @RequestBody Bookings requestData) {	
 	Bookings theBook = new Bookings();
 		theBook.setSeat(requestData.getSeat());
-		//Show theShow = showService.fetchById(showId);
-		//theBook.setShow(theShow);
+		Show theShow = showService.fetchById(showId);
+		theBook.setShow(theShow);
 		return bookingService.saveBooking(theBook);
 	}
 	
@@ -78,12 +78,12 @@ public class BookingController {
 	}
 	
 	
-	//@GetMapping("/{ID}/Booking")
-	//public List<Bookings> getBookingListInShow(@PathVariable(value = "ID") long ID){
+	@GetMapping("/{ID}/Booking")
+	public List<Bookings> getBookingListInShow(@PathVariable(value = "ID") long ID){
 		
-		//Show theShow = showService.fetchById(ID);
-		//return bookingService.getBookingByShowId(theShow);
+		Show theShow = showService.fetchById(ID);
+		return bookingService.getBookingByShowId(theShow);
 		
-	//}
+	}
 
 }

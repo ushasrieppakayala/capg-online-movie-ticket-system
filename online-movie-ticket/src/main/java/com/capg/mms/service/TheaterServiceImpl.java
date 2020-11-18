@@ -13,8 +13,6 @@ import com.capg.mms.entity.City;
 import com.capg.mms.entity.Theater;
 import com.capg.mms.exceptions.TheaterNotFoundException;
 
-
-
 @Service
 @Transactional
 public class TheaterServiceImpl implements ITheaterService{

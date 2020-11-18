@@ -31,6 +31,16 @@ public class Movie {
 	@OnDelete(action=OnDeleteAction.CASCADE) 
 	public List<Show> show;
 	
+	public Movie() {
+		super();
+	}
+	public Movie(String movieName, String movieDirector, String movieDescription, String movieImg) {
+		super();
+		this.movieName = movieName;
+		this.movieDirector = movieDirector;
+		this.movieDescription = movieDescription;
+		this.movieImg = movieImg;
+	}
 	public Movie(long movieId, String movieName, String movieDirector, String movieDescription, String movieImg,
 			List<Show> show) {
 		super();

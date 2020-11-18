@@ -71,15 +71,15 @@ public class TheaterController {
 		.body(new Response(service.getTheater(), new Date()));
 	}
 	
-//	@PutMapping("/{cityId}/{Id}")
-//	public Theater createTheater(@PathVariable("cityId") long cityId, @PathVariable("Id") long Id) {
-//
-//		// return service
-//		Theater theTheater = service.findOne(Id) ;
-//		City theCity = cservice.findOne(cityId);
-//		theTheater.setCity(theCity);
-//		return service.saveTheater(theTheater);
-//	}
+	@PutMapping("/{cityId}/{Id}")
+	public Theater createTheater(@PathVariable("cityId") long cityId, @PathVariable("Id") long Id) {
+
+		
+		Theater theTheater = service.findOne(Id) ;
+		City theCity = cservice.findOne(cityId);
+		theTheater.setCity(theCity);
+		return service.saveTheater(theTheater);
+	}
 
 	@GetMapping("/theater/{ID}")
 	public ResponseEntity<Theater> getOneTheater(@PathVariable(value = "ID") long ID) {
@@ -89,13 +89,13 @@ public class TheaterController {
 		}
 		return ResponseEntity.ok().body(theTheater);
 	}
-//
-//	@GetMapping("/TheaterByCity/{ID}")
-//	public List<Theater> getTheaterInCity(@PathVariable(value = "ID") long ID) {
-//
-//		City theCity = cservice.findOne(ID);
-//
-//		return service.getTheaterByCityId(theCity);
-//	}
+
+	@GetMapping("/TheaterByCity/{ID}")
+	public List<Theater> getTheaterInCity(@PathVariable(value = "ID") long ID) {
+
+		City theCity = cservice.findOne(ID);
+
+		return service.getTheaterByCityId(theCity);
+	}
 
 }
