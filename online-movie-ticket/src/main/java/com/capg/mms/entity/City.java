@@ -80,4 +80,12 @@ public class City {
 		this.theTheater = theTheater;
 	}
 
+	public City(String cityName, String cityPincode, String cityState) {
+		super();
+		this.cityName = cityName;
+		this.cityPincode = cityPincode;
+		this.cityState = cityState;
+	}
+	
+
 }

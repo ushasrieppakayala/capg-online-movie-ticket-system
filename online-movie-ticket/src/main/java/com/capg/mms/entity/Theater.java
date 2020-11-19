@@ -88,6 +88,13 @@ public class Theater {
 		this.theShow = theShow;
 	}
 
+	public Theater(String theaterName, String theaterArea) {
+		super();
+		this.theaterName = theaterName;
+		this.theaterArea = theaterArea;
+	}
+
+	
 	
 	
 

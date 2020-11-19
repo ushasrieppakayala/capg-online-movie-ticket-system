@@ -23,7 +23,7 @@ import com.capg.mms.exceptions.MovieNotFound;
 import com.capg.mms.service.IMovieService;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 @RequestMapping("/movie")
 public class MovieController {
 
